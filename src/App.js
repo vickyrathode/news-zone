@@ -28,7 +28,7 @@ class App extends Component {
         <div>
           <NavBar />
           <LoadingBar color='#f11946' progress={this.state.progress} height={2} />
-          <Routes>
+          <Routes basename="/news-zone">
             <Route path='/business' element={<News setProgress={this.setProgress} apiKey={this.apiKey}  pageSize={this.pageSize} key='business' category='business' />} />
             <Route path='/entertainment' element={<News setProgress={this.setProgress}apiKey={this.apiKey} pageSize={this.pageSize} key='entertainment' category='entertainment' />} />
             <Route path='/general' element={<News setProgress={this.setProgress}apiKey={this.apiKey} pageSize={this.pageSize} key='general' category='general' />} />
@@ -36,7 +36,7 @@ class App extends Component {
             <Route path='/science' element={<News setProgress={this.setProgress}apiKey={this.apiKey} pageSize={this.pageSize} key='science' category='science' />} />
             <Route path='/sports' element={<News setProgress={this.setProgress}apiKey={this.apiKey} pageSize={this.pageSize} key='sports' category='sports' />} />
             <Route path='/technology' element={<News setProgress={this.setProgress}apiKey={this.apiKey} pageSize={this.pageSize} key='technology' category='technology' />} />
-            <Route path='/' element={<News setProgress={this.setProgress}apiKey={this.apiKey} pageSize={this.pageSize} key='general' category='general' />} />
+            <Route path='/news-zone' element={<News setProgress={this.setProgress}apiKey={this.apiKey} pageSize={this.pageSize} key='general' category='general' />} />
           </Routes>
         </div>
       </Router>
